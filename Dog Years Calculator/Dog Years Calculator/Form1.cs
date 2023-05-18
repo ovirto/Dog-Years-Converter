@@ -29,6 +29,7 @@ namespace Dog_Years_Calculator
             lblResult.Enabled = true;
             lblResult.Text = "This is now visable";
             years = int.Parse(txtAge.Text);
+            //FIXME: Error checking for cases with no input
             lblResult.Text = "Your age in dog years is: " +  (years * 7).ToString();
         }
 
@@ -38,6 +39,12 @@ namespace Dog_Years_Calculator
             lblResult.Text = "";
             years = 0;
             txtAge.Text = string.Empty;
+        }
+
+        //TODO: assign random dog breed for user. Just for fun.
+        private String UserDogBreed()
+        {
+            return "Pitbull";
         }
     }
 }
